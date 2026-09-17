@@ -40,3 +40,10 @@ app.get("/health", (c) => {
         status: "ok"
     },200)
 })
+
+
+Bun.serve({
+  port: 3002,
+  hostname: "0.0.0.0",
+  fetch: app.fetch,
+});

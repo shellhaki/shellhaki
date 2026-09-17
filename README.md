@@ -21,7 +21,7 @@
     </td>
     <td width="62%" valign="middle">
 
-### Hi, I'm Maxwell 👋
+### Hi, I'm Excel, popularly known as haki 👋
 
 I'm an 18-year-old **backend and systems engineer** who enjoys building the parts of software people rarely see but always rely on: APIs, infrastructure, developer tooling and the servers that keep it all running.
 
@@ -158,16 +158,12 @@ I'm the founder of **[envi](https://envisecrets.com)**, a security-first secrets
 ## GitHub Activity
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=shellhaki&theme=tokyonight" alt="Contribution overview" width="100%" />
+  <img src="https://raw.githubusercontent.com/shellhaki/shellhaki/output/stats.svg" alt="GitHub stats" width="49%" />
+  <img src="https://raw.githubusercontent.com/shellhaki/shellhaki/output/languages.svg" alt="Most used languages" width="49%" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=shellhaki&theme=tokyonight" alt="GitHub stats" height="170" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=shellhaki&theme=tokyonight" alt="Top languages" height="170" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=shellhaki&theme=tokyonight&hide_border=true&ring=E100FF&fire=00D4FF&currStreakLabel=00D4FF" alt="Contribution streak" />
+  <img src="https://raw.githubusercontent.com/shellhaki/shellhaki/output/streak.svg" alt="Contribution streak" width="98.5%" />
 </p>
 
 <p align="center">
@@ -186,6 +182,9 @@ I'm the founder of **[envi](https://envisecrets.com)**, a security-first secrets
   I'm always happy to talk about backend systems, infrastructure and developer tooling.
   <br /><br />
   <a href="https://shellhaki.dev"><img src="https://img.shields.io/badge/Website-shellhaki.dev-7F00FF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
+  <a href="https://www.linkedin.com/in/excel-maxwell-b0739a312"><img src="https://img.shields.io/badge/LinkedIn-Excel%20Maxwell-0A66C2?style=for-the-badge&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://x.com/shellhaki"><img src="https://img.shields.io/badge/X-@shellhaki-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://t.me/shellhakii"><img src="https://img.shields.io/badge/Telegram-@shellhakii-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
   <a href="https://github.com/shellhaki"><img src="https://img.shields.io/badge/GitHub-shellhaki-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 </p>
 
