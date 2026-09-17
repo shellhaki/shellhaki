@@ -9,4 +9,4 @@
 
     EXPOSE 3002
 
-    CMD ["bun", "run", "src/index.ts"]
+    CMD ["bun", "run", "index.ts"]
