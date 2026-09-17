@@ -22,7 +22,6 @@ jobs:
       - name: Generate stats, streak and language cards
         run: bun scripts/profile-cards.ts ${{ github.repository_owner }} dist
         env:
-          # Add a STATS_TOKEN secret (classic PAT, read:user) to include private contributions.
           GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Generate contribution snake

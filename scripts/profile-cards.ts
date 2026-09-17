@@ -1,8 +1,3 @@
-// Generates the stats, streak and language SVG cards for the profile README.
-// Runs in GitHub Actions so the cards never depend on a rate-limited public service.
-//
-//   GITHUB_TOKEN=... bun scripts/profile-cards.ts [username] [outDir]
-
 const USER = process.argv[2] ?? "shellhaki";
 const OUT = process.argv[3] ?? "dist";
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -23,8 +18,6 @@ async function gql<T>(query: string, variables: Record<string, unknown> = {}): P
   }
   return json.data;
 }
-
-// ── data ────────────────────────────────────────────────────────────────────
 
 type Repo = {
   stargazerCount: number;
@@ -107,8 +100,6 @@ async function fetchYears(years: number[]): Promise<Year[]> {
   return years.map((y) => data.user[`y${y}`]!);
 }
 
-// ── maths ───────────────────────────────────────────────────────────────────
-
 type Streak = { length: number; start: string | null; end: string | null };
 
 function streaks(days: { date: string; count: number }[]) {
@@ -126,7 +117,6 @@ function streaks(days: { date: string; count: number }[]) {
     }
   }
 
-  // Today not having contributions yet shouldn't break the current streak.
   let i = past.length - 1;
   if (i >= 0 && past[i]!.date === today && past[i]!.count === 0) i--;
   let current: Streak = { length: 0, start: null, end: null };
@@ -135,8 +125,6 @@ function streaks(days: { date: string; count: number }[]) {
   }
   return { current, longest };
 }
-
-// ── rendering helpers ───────────────────────────────────────────────────────
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 const fmt = (n: number) => (n >= 10_000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, "")}k` : n.toLocaleString("en-US"));
@@ -206,8 +194,6 @@ function ring(cx: number, cy: number, r: number, fraction: number, delay: number
   </circle>`;
 }
 
-// ── cards ───────────────────────────────────────────────────────────────────
-
 function statsCard(s: { stars: number; commits: number; prs: number; issues: number; contributedTo: number; total: number }) {
   const rows: [string, number, string][] = [
     ["Total stars earned", s.stars, PALETTE.magenta],
@@ -272,7 +258,6 @@ ${legend}`,
 }
 
 function streakCard(s: { total: number; since: string; current: Streak; longest: Streak }) {
-  // Side columns: number, label, date range. The middle column puts its number inside a ring.
   const col = (cx: number, value: string, label: string, sub: string, delay: number) => `
   <g class="fade" style="animation-delay:${delay}s">
     <text x="${cx}" y="112" class="big" text-anchor="middle">${value}</text>
@@ -295,8 +280,6 @@ ${ring(440, 100, 36, Math.min(1, s.current.length / Math.max(1, s.longest.length
 ${col(734, String(s.longest.length), "Longest Streak", range(s.longest), 0.4)}`,
   );
 }
-
-// ── main ────────────────────────────────────────────────────────────────────
 
 const [profile, repos] = await Promise.all([fetchProfile(), fetchRepos()]);
 const years = profile.contributionsCollection.contributionYears.slice().sort();
