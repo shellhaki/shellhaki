@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="210" viewBox="0 0 440 210" role="img" aria-label="GitHub Stats">
+  <title>GitHub Stats</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7F00FF"/>
+      <stop offset="50%" stop-color="#E100FF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" class="bg-a"/>
+      <stop offset="100%" class="bg-b"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
+    .bg-a { stop-color: #140b24; } .bg-b { stop-color: #0b1320; }
+    .title { font-size: 18px; font-weight: 700; }
+    .label { font-size: 14px; fill: #c9d1d9; }
+    .value { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .big { font-size: 28px; font-weight: 700; fill: #ffffff; }
+    .muted { font-size: 12px; fill: #8b949e; }
+    .track { stroke: #ffffff; stroke-opacity: .08; }
+    .divider { stroke: #ffffff; stroke-opacity: .1; }
+    .fade { opacity: 0; animation: fade .6s ease-out forwards; }
+    .grow { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: grow 1s ease-out .2s forwards; }
+    @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { to { transform: scaleX(1); } }
+    @media (prefers-color-scheme: light) {
+      .bg-a { stop-color: #faf5ff; } .bg-b { stop-color: #f0fbff; }
+      .label { fill: #3d444d; } .value, .big { fill: #1f2328; } .muted { fill: #59636e; }
+      .track, .divider { stroke: #1f2328; }
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="439" height="209" rx="14" fill="url(#bg)" stroke="url(#accent)" stroke-opacity=".6"/>
+  <text x="25" y="38" class="title fade" fill="url(#accent)">GitHub Stats</text>
+  <g class="fade" style="animation-delay:0.15s">
+    <circle cx="31" cy="70" r="4" fill="#E100FF"/>
+    <text x="45" y="75" class="label">Total stars earned</text>
+    <text x="265" y="75" class="value" text-anchor="end">59</text>
+  </g>
+  <g class="fade" style="animation-delay:0.25s">
+    <circle cx="31" cy="96" r="4" fill="#7F00FF"/>
+    <text x="45" y="101" class="label">Total commits</text>
+    <text x="265" y="101" class="value" text-anchor="end">610</text>
+  </g>
+  <g class="fade" style="animation-delay:0.35s">
+    <circle cx="31" cy="122" r="4" fill="#00D4FF"/>
+    <text x="45" y="127" class="label">Pull requests</text>
+    <text x="265" y="127" class="value" text-anchor="end">12</text>
+  </g>
+  <g class="fade" style="animation-delay:0.45000000000000007s">
+    <circle cx="31" cy="148" r="4" fill="#E100FF"/>
+    <text x="45" y="153" class="label">Issues</text>
+    <text x="265" y="153" class="value" text-anchor="end">11</text>
+  </g>
+  <g class="fade" style="animation-delay:0.55s">
+    <circle cx="31" cy="174" r="4" fill="#7F00FF"/>
+    <text x="45" y="179" class="label">Contributed to</text>
+    <text x="265" y="179" class="value" text-anchor="end">8</text>
+  </g>
+  <circle cx="355" cy="112" r="50" fill="none" stroke-width="7" class="track"/>
+  <circle cx="355" cy="112" r="50" fill="none" stroke="url(#accent)" stroke-width="7" stroke-linecap="round"
+    stroke-dasharray="314.16" stroke-dashoffset="314.16" transform="rotate(-90 355 112)">
+    <animate attributeName="stroke-dashoffset" from="314.16" to="0.00" dur="1.2s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+  </circle>
+  <g class="fade" style="animation-delay:.6s">
+    <text x="355" y="115" class="big" text-anchor="middle">683</text>
+    <text x="355" y="134" class="muted" text-anchor="middle">contributions</text>
+  </g>
+</svg>

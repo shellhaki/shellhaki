@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="210" viewBox="0 0 440 210" role="img" aria-label="Most Used Languages">
+  <title>Most Used Languages</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7F00FF"/>
+      <stop offset="50%" stop-color="#E100FF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" class="bg-a"/>
+      <stop offset="100%" class="bg-b"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
+    .bg-a { stop-color: #140b24; } .bg-b { stop-color: #0b1320; }
+    .title { font-size: 18px; font-weight: 700; }
+    .label { font-size: 14px; fill: #c9d1d9; }
+    .value { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .big { font-size: 28px; font-weight: 700; fill: #ffffff; }
+    .muted { font-size: 12px; fill: #8b949e; }
+    .track { stroke: #ffffff; stroke-opacity: .08; }
+    .divider { stroke: #ffffff; stroke-opacity: .1; }
+    .fade { opacity: 0; animation: fade .6s ease-out forwards; }
+    .grow { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: grow 1s ease-out .2s forwards; }
+    @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { to { transform: scaleX(1); } }
+    @media (prefers-color-scheme: light) {
+      .bg-a { stop-color: #faf5ff; } .bg-b { stop-color: #f0fbff; }
+      .label { fill: #3d444d; } .value, .big { fill: #1f2328; } .muted { fill: #59636e; }
+      .track, .divider { stroke: #1f2328; }
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="439" height="209" rx="14" fill="url(#bg)" stroke="url(#accent)" stroke-opacity=".6"/>
+  <text x="25" y="38" class="title fade" fill="url(#accent)">Most Used Languages</text>
+  <clipPath id="bar"><rect x="25" y="58" width="390" height="10" rx="5"/></clipPath>
+  <rect x="25" y="58" width="390" height="10" rx="5" class="track" fill="none"/>
+  <g clip-path="url(#bar)"><g class="grow"><rect x="25.00" y="58" width="201.92" height="10" fill="#3178c6"/><rect x="226.92" y="58" width="121.12" height="10" fill="#00ADD8"/><rect x="348.04" y="58" width="16.46" height="10" fill="#ec915c"/><rect x="364.50" y="58" width="11.65" height="10" fill="#663399"/><rect x="376.15" y="58" width="9.73" height="10" fill="#e34c26"/><rect x="385.88" y="58" width="6.91" height="10" fill="#89e051"/><rect x="392.78" y="58" width="6.20" height="10" fill="#f1e05a"/><rect x="398.98" y="58" width="6.08" height="10" fill="#dea584"/></g></g>
+  <g class="fade" style="animation-delay:0.3s">
+    <circle cx="31" cy="95" r="6" fill="#3178c6"/>
+    <text x="45" y="100" class="label">TypeScript</text>
+    <text x="210" y="100" class="muted" text-anchor="end">51.8%</text>
+  </g>
+  <g class="fade" style="animation-delay:0.38s">
+    <circle cx="236" cy="95" r="6" fill="#00ADD8"/>
+    <text x="250" y="100" class="label">Go</text>
+    <text x="415" y="100" class="muted" text-anchor="end">31.1%</text>
+  </g>
+  <g class="fade" style="animation-delay:0.45999999999999996s">
+    <circle cx="31" cy="125" r="6" fill="#ec915c"/>
+    <text x="45" y="130" class="label">Zig</text>
+    <text x="210" y="130" class="muted" text-anchor="end">4.2%</text>
+  </g>
+  <g class="fade" style="animation-delay:0.54s">
+    <circle cx="236" cy="125" r="6" fill="#663399"/>
+    <text x="250" y="130" class="label">CSS</text>
+    <text x="415" y="130" class="muted" text-anchor="end">3.0%</text>
+  </g>
+  <g class="fade" style="animation-delay:0.62s">
+    <circle cx="31" cy="155" r="6" fill="#e34c26"/>
+    <text x="45" y="160" class="label">HTML</text>
+    <text x="210" y="160" class="muted" text-anchor="end">2.5%</text>
+  </g>
+  <g class="fade" style="animation-delay:0.7s">
+    <circle cx="236" cy="155" r="6" fill="#89e051"/>
+    <text x="250" y="160" class="label">Shell</text>
+    <text x="415" y="160" class="muted" text-anchor="end">1.8%</text>
+  </g>
+  <g class="fade" style="animation-delay:0.78s">
+    <circle cx="31" cy="185" r="6" fill="#f1e05a"/>
+    <text x="45" y="190" class="label">JavaScript</text>
+    <text x="210" y="190" class="muted" text-anchor="end">1.6%</text>
+  </g>
+  <g class="fade" style="animation-delay:0.8600000000000001s">
+    <circle cx="236" cy="185" r="6" fill="#dea584"/>
+    <text x="250" y="190" class="label">Rust</text>
+    <text x="415" y="190" class="muted" text-anchor="end">1.6%</text>
+  </g>
+</svg>
