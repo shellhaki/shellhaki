@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="220" viewBox="0 0 880 220" role="img" aria-label="Contribution Streak">
+  <title>Contribution Streak</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7F00FF"/>
+      <stop offset="50%" stop-color="#E100FF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" class="bg-a"/>
+      <stop offset="100%" class="bg-b"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
+    .bg-a { stop-color: #140b24; } .bg-b { stop-color: #0b1320; }
+    .title { font-size: 18px; font-weight: 700; }
+    .label { font-size: 14px; fill: #c9d1d9; }
+    .value { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .big { font-size: 28px; font-weight: 700; fill: #ffffff; }
+    .muted { font-size: 12px; fill: #8b949e; }
+    .track { stroke: #ffffff; stroke-opacity: .08; }
+    .divider { stroke: #ffffff; stroke-opacity: .1; }
+    .fade { opacity: 0; animation: fade .6s ease-out forwards; }
+    .grow { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: grow 1s ease-out .2s forwards; }
+    @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { to { transform: scaleX(1); } }
+    @media (prefers-color-scheme: light) {
+      .bg-a { stop-color: #faf5ff; } .bg-b { stop-color: #f0fbff; }
+      .label { fill: #3d444d; } .value, .big { fill: #1f2328; } .muted { fill: #59636e; }
+      .track, .divider { stroke: #1f2328; }
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="879" height="219" rx="14" fill="url(#bg)" stroke="url(#accent)" stroke-opacity=".6"/>
+  <text x="25" y="38" class="title fade" fill="url(#accent)">Contribution Streak</text>
+  <line x1="293" y1="62" x2="293" y2="196" class="divider"/>
+  <line x1="587" y1="62" x2="587" y2="196" class="divider"/>
+
+  <g class="fade" style="animation-delay:0.2s">
+    <text x="146" y="112" class="big" text-anchor="middle">705</text>
+    <text x="146" y="142" class="label" text-anchor="middle">Total Contributions</text>
+    <text x="146" y="164" class="muted" text-anchor="middle">2024 – Present</text>
+  </g>
+  <circle cx="440" cy="100" r="36" fill="none" stroke-width="7" class="track"/>
+  <circle cx="440" cy="100" r="36" fill="none" stroke="url(#accent)" stroke-width="7" stroke-linecap="round"
+    stroke-dasharray="226.19" stroke-dashoffset="226.19" transform="rotate(-90 440 100)">
+    <animate attributeName="stroke-dashoffset" from="226.19" to="217.15" dur="1.2s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+  </circle>
+  <g class="fade" style="animation-delay:.5s">
+    <text x="440" y="110" class="big" text-anchor="middle">0</text>
+    <text x="440" y="164" class="value" text-anchor="middle" fill="url(#accent)" style="fill:url(#accent)">Current Streak</text>
+    <text x="440" y="186" class="muted" text-anchor="middle">No streak yet</text>
+  </g>
+
+  <g class="fade" style="animation-delay:0.4s">
+    <text x="734" y="112" class="big" text-anchor="middle">9</text>
+    <text x="734" y="142" class="label" text-anchor="middle">Longest Streak</text>
+    <text x="734" y="164" class="muted" text-anchor="middle">Dec 30, 2024 – Jan 7, 2025</text>
+  </g>
+</svg>
